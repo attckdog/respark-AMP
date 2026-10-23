@@ -1,5 +1,5 @@
 Meta.DisplayName=Respark
-Meta.Description=Respark dedicated server (Linux). Installs from a local build folder - see Docs/How To/Hosting with AMP.md
+Meta.Description=Respark dedicated server (Linux). Upload the contents of Release/server_linux into respark/server/ - see Docs/How To/Hosting with AMP.md
 Meta.OS=Linux
 Meta.AarchSupport=Unsupported
 Meta.Arch=x86_64

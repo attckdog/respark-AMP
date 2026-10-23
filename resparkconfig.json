@@ -80,19 +80,5 @@
         "ParamFieldName": "Admins",
         "IncludeInCommandLine": false,
         "DefaultValue": ""
-    },
-    {
-        "DisplayName": "Build Source Folder",
-        "Category": "Updates",
-        "Subcategory": "Respark Build:download",
-        "Description": "Folder on this machine holding a Linux server build (the contents of Release/server_linux: ResparkServer.x86_64, ResparkServer_Data, ...). Update copies it into the instance. Must be readable by the AMP user, and visible inside the container if the instance runs in Docker.",
-        "Keywords": "build,source,folder,path,update,install",
-        "FieldName": "BuildSourcePath",
-        "InputType": "text",
-        "IsFlagArgument": false,
-        "ParamFieldName": "BuildSourcePath",
-        "IncludeInCommandLine": false,
-        "Required": true,
-        "DefaultValue": "/opt/respark/build"
     }
 ]
