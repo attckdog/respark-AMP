@@ -1,0 +1,17 @@
+[
+    {
+        "UpdateStageName": "Respark Server Copy",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/bash",
+        "UpdateSourceArgs": "-c \"set -e; src=\\\"{{BuildSourcePath}}\\\"; dst=\\\"{{$FullBaseDir}}\\\"; case \\\"$dst\\\" in */respark/server/) ;; *) echo \\\"Refusing to replace unexpected folder $dst\\\"; exit 1;; esac; if [ ! -f \\\"$src/ResparkServer.x86_64\\\" ]; then echo \\\"No ResparkServer.x86_64 in $src - set Build Source Folder under Updates\\\"; exit 1; fi; rm -rf \\\"$dst\\\"; mkdir -p \\\"$dst\\\"; cp -a \\\"$src/.\\\" \\\"$dst\\\"; chmod +x \\\"$dst/ResparkServer.x86_64\\\"; echo \\\"Copied Respark server from $src\\\"\"",
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Data Directory Creation",
+        "UpdateSourcePlatform": "All",
+        "UpdateSource": "CreateDirectory",
+        "UpdateSourceArgs": "{{$FullRootDir}}data",
+        "SkipOnFailure": false
+    }
+]
